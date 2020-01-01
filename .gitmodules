@@ -16,3 +16,6 @@
 [submodule "openocd"]
 	path = openocd
 	url = git@github.com:ntfreak/openocd.git
+[submodule "atom-stlink"]
+	path = atom-stlink
+	url = git@github.com:wendlers/atom-stlink.git
