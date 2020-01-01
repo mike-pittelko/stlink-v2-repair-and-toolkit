@@ -13,3 +13,6 @@
 [submodule "Stlink_V2.1_PCB"]
 	path = Stlink_V2.1_PCB
 	url = git@github.com:leiyitan/Stlink_V2.1_PCB.git
+[submodule "openocd"]
+	path = openocd
+	url = git@github.com:ntfreak/openocd.git
