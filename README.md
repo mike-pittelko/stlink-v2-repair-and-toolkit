@@ -1,6 +1,5 @@
 #stlink-v2-toolkit
 How to recover (or make from scratch) an stlink v2 board, and a bunch of other tools
-------------------------------------------------------------------------------------
 
 Clone and load the submodules in this repo:
 
@@ -51,8 +50,8 @@ You will have some wires on the one to be fixed connected to a regular programme
 should to be plugged into the computer.
 
 Step 2:
-To unlock the flash on a device:
->openocd -f interface/stlink-v2.cfg -f CONFIG.CFG -c "init" -c "halt" -c "stm32f1x unlock 0" -c "shutdown"
+The flash is very likely locked. To unlock the flash on a device:
+     openocd -f interface/stlink-v2.cfg -f CONFIG.CFG -c "init" -c "halt" -c "stm32f1x unlock 0" -c "shutdown"
 
 
      Open On-Chip Debugger 0.10.0
@@ -88,7 +87,7 @@ and plug it back in.
 
 Step 4:
 Erase the flash on the device
->st-flash erase
+     st-flash erase
 
 
      st-flash 1.5.1
@@ -103,7 +102,7 @@ and plug it back in.
 
 Step 6:
 To flash the stlinkv2 image
->openocd -f interface/stlink-v2.cfg -f CONFIG.CFG-c "init" -c "halt" -c "flash write_image erase STLinkV2.J16.S4.bin 0x8000000" -c "shutdown"
+     openocd -f interface/stlink-v2.cfg -f CONFIG.CFG-c "init" -c "halt" -c "flash write_image erase STLinkV2.J16.S4.bin 0x8000000" -c "shutdown"
 
 
      Open On-Chip Debugger 0.10.0
