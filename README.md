@@ -1,11 +1,15 @@
-# stlink-v2-recovery
+# stlink-v2-toolkit
 How to recover (or make from scratch) an stlink v2 board.
 
-You need these tools:
+Clone and load the submodules in this repo
+git clone --recursive git@github.com:mike-pittelko/stlink-v2-recovery.git
+
+You need open-ocd and stlink:
 
 brew install open-ocd
 brew install stlink
 
+Mirrors are in this repo as submodules if needed.
 
 ------- Figure out what config file you need.
 
@@ -22,7 +26,7 @@ if the cpuid "0x2ba01477" is not found (expects 0x1ba01477) when unlocking then 
      } else {
         set _CHIPNAME stm32f1x
      }
-here>>>  set CPUTAPID 0x2ba01477
+     set CPUTAPID 0x2ba01477
 
      save as myconfig.cfg and: CONFIG.CFG = myconfig.cfg
 else
