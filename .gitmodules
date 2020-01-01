@@ -1,0 +1,15 @@
+[submodule "blackmagic"]
+	path = blackmagic
+	url = git@github.com:blacksphere/blackmagic.git
+[submodule "Stlink-Bootloaders"]
+	path = Stlink-Bootloaders
+	url = git@github.com:Krakenw/Stlink-Bootloaders.git
+[submodule "stlink"]
+	path = stlink
+	url = git@github.com:texane/stlink.git
+[submodule "stlink-tool"]
+	path = stlink-tool
+	url = git@github.com:jeanthom/stlink-tool.git
+[submodule "Stlink_V2.1_PCB"]
+	path = Stlink_V2.1_PCB
+	url = git@github.com:leiyitan/Stlink_V2.1_PCB.git
