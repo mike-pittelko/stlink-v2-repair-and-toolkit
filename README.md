@@ -48,9 +48,8 @@ Connect an stlinkv2 to the programming pins on the stlinkv2 you want to recover/
 Step 2:
 The flash is very likely locked. To unlock the flash on a device:
 
-     openocd -f interface/stlink-v2.cfg -f CONFIG.CFG -c "init" -c "halt" -c "stm32f1x unlock 0" -c "shutdown"
+`openocd -f interface/stlink-v2.cfg -f CONFIG.CFG -c "init" -c "halt" -c "stm32f1x unlock 0" -c "shutdown"`
  
-
      Open On-Chip Debugger 0.10.0
      Licensed under GNU GPL v2
      For bug reports, read
