@@ -1,12 +1,17 @@
-# stlink-v2-toolkit
+stlink-v2-toolkit
 How to recover (or make from scratch) an stlink v2 board, and a bunch of other tools
 
-Clone and load the submodules in this repo
-  git clone --recursive git@github.com:mike-pittelko/stlink-v2-toolkit.git
+Clone and load the submodules in this repo:
+
+>git clone --recursive git@github.com:mike-pittelko/stlink-v2-toolkit.git
+
 or
-  git clone git@github.com:mike-pittelko/stlink-v2-toolkit.git
-  and pull in the submodules you need:
-  git submodule update [blackmagic,openocd,stlink,Stlink_V2.1_PCB,Stlink-Bootloaders,atom-stlink]
+
+>git clone git@github.com:mike-pittelko/stlink-v2-toolkit.git
+  
+and pull in the submodules you need:
+  
+>git submodule update [blackmagic,openocd,stlink,Stlink_V2.1_PCB,Stlink-Bootloaders,atom-stlink]
 
 
 You need open-ocd and stlink installed:
