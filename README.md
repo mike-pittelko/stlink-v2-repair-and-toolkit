@@ -48,8 +48,8 @@ Connect an stlinkv2 to the programming pins on the stlinkv2 you want to recover/
 Step 2:
 The flash is very likely locked. To unlock the flash on a device:
 
-	openocd -f interface/stlink-v2.cfg -f CONFIG.CFG -c "init" -c "halt" -c "stm32f1x unlock 0" -c "shutdown"
-
+     openocd -f interface/stlink-v2.cfg -f CONFIG.CFG -c "init" -c "halt" -c "stm32f1x unlock 0" -c "shutdown"
+ 
 
      Open On-Chip Debugger 0.10.0
      Licensed under GNU GPL v2
@@ -85,7 +85,7 @@ Step 4:
 Erase the flash on the device
     
      st-flash erase
-
+ 
 
      st-flash 1.5.1
      2020-01-01T11:07:23 INFO common.c: Loading device parameters....
@@ -100,7 +100,7 @@ Step 6:
 To flash the stlinkv2 image
 
      openocd -f interface/stlink-v2.cfg -f CONFIG.CFG-c "init" -c "halt" -c "flash write_image erase STLinkV2.J16.S4.bin 0x8000000" -c "shutdown"
-
+ 
 
      Open On-Chip Debugger 0.10.0
      Licensed under GNU GPL v2
@@ -143,10 +143,11 @@ Remove the wires from the fixed stlinkv2, you're done.
 
 
 Misc references:
-http://e.pavlin.si/2016/02/28/how-to-program-blank-stm32f1-with-stlink-v2-firmware/
-http://slemi.info/2018/08/14/making-your-own-st-link-v2/
-https://embdev.net/articles/STM_Discovery_and_Nucleo_as_Black_Magic_Probe#Version_2
-https://github.com/Krakenw/Stlink-Bootloaders
-https://www.st.com/en/development-tools/stsw-link007.html
-https://wiki.paparazziuav.org/wiki/STLink
-https://atom.io/packages/stlink
+
+* http://e.pavlin.si/2016/02/28/how-to-program-blank-stm32f1-with-stlink-v2-firmware/
+* http://slemi.info/2018/08/14/making-your-own-st-link-v2/
+* https://embdev.net/articles/STM_Discovery_and_Nucleo_as_Black_Magic_Probe#Version_2
+* https://github.com/Krakenw/Stlink-Bootloaders
+* https://www.st.com/en/development-tools/stsw-link007.html
+* https://wiki.paparazziuav.org/wiki/STLink
+* https://atom.io/packages/stlink
