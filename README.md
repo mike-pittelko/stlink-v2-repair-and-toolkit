@@ -38,6 +38,8 @@ should to be plugged into the computer.
 Step 2:
 To unlock the flash on a device:
 >openocd -f interface/stlink-v2.cfg -f CONFIG.CFG -c "init" -c "halt" -c "stm32f1x unlock 0" -c "shutdown"
+
+
 Open On-Chip Debugger 0.10.0
 Licensed under GNU GPL v2
 For bug reports, read
@@ -72,6 +74,8 @@ and plug it back in.
 Step 4:
 Erase the flash on the device
 >st-flash erase
+
+
 st-flash 1.5.1
 2020-01-01T11:07:23 INFO common.c: Loading device parameters....
 2020-01-01T11:07:23 INFO common.c: Device connected is: F1 Medium-density device, id 0x20036410
@@ -85,6 +89,8 @@ and plug it back in.
 Step 6:
 To flash the stlinkv2 image
 >openocd -f interface/stlink-v2.cfg -f CONFIG.CFG-c "init" -c "halt" -c "flash write_image erase STLinkV2.J16.S4.bin 0x8000000" -c "shutdown"
+
+
 Open On-Chip Debugger 0.10.0
 Licensed under GNU GPL v2
 For bug reports, read
