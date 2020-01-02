@@ -50,6 +50,9 @@ Connect an stlinkv2 to the programming pins on the stlinkv2 you want to recover/
 With the case off (it just slides off the usb end, but could take some force), the board will probably look roughly like this. Look for the programming pins. They **may not be identical to this picture**, but they will almost certainly be labeled.  The labels on the board should be assumed to be correct.
 ![Image of board](images/1600px-Stlink-clone-v2013-pinout.jpeg)
 
+It will look something like this if hooked up correctly:
+![Image of board](images/P1160475_sm-1024x768.jpg "Hooked up")
+
 Step 2:
 The flash is very likely locked. To unlock the flash on a device:
 
