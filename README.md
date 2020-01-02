@@ -151,11 +151,12 @@ Remove the wires from the fixed stlinkv2, you're done.
 
 
 # References for building your own stlinkv2
+Building one of these for standalone use is not worth the effort. Get one from the usual gettin' spots for $5-10. If you want to build one into another design for some reason this might be helpful.
 
 ![Chinese Clone Schematic](/images/stlink-V2-schematic.jpg "Schematic of a clone STLinkV2")
 ![Chinese Clone Schematic](/images/stlink-v2-image.jpeg "Schematic of a clone STLinkV2")
 
-**Also see the /Stlink_V2.1_PCB submodule for other documentation.**
+**Also see the /Stlink_V2.1_PCB submodule for other documentation and some board files**
 
 # Misc references:
 
@@ -166,3 +167,7 @@ Remove the wires from the fixed stlinkv2, you're done.
 * https://www.st.com/en/development-tools/stsw-link007.html
 * https://wiki.paparazziuav.org/wiki/STLink
 * https://atom.io/packages/stlink
+
+# References for conversion of a stlink to blackmagic probe.
+* https://github.com/blacksphere/blackmagic/wiki
+* http://blog.linuxbits.io/2016/02/15/cheap-chinese-st-link-v-2-programmer-converted-to-black-magic-probe-debugger/
