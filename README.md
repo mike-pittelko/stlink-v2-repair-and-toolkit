@@ -27,18 +27,20 @@ Figure out what config file you need...
 
 To setup the config, you MAY need to do this:
 
-if the cpuid "0x2ba01477" is not found (expects 0x1ba01477) when unlocking then you need to
+if the **cpuid "0x2ba01477" is not found (expects 0x1ba01477)** when unlocking then you need to
      make a copy of targets/stm32f1x.cfg,
-          cp /usr/local/Cellar/open-ocd/0.10.0/share/openocd/scripts/target/stm32f1x.cfg mikep.cfg
-     at the top of the file, change to:
+	
+	cp /usr/local/Cellar/open-ocd/0.10.0/share/openocd/scripts/target/stm32f1x.cfg myconfig.cfg.cfg
+     
+at the top of the file, change to:
 
-     if { [info exists CHIPNAME] } {
+`     if { [info exists CHIPNAME] } {
         set _CHIPNAME $CHIPNAME
      } else {
         set _CHIPNAME stm32f1x
      }
      set CPUTAPID 0x2ba01477
-
+`
      save as myconfig.cfg and: CONFIG.CFG = myconfig.cfg
 else
 	CONFIG.CFG = target/stm32f1x.cfg
