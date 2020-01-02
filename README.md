@@ -14,7 +14,7 @@ and pull in the submodules you need:
 
      git submodule update [blackmagic,openocd,stlink,Stlink_V2.1_PCB,Stlink-Bootloaders,atom-stlink]
 
-# To program/recover an cheap chinese clone of the stlinkv2:
+# To program/recover a cheap chinese clone of the stlinkv2:
 
 You need open-ocd and stlink installed:
 
