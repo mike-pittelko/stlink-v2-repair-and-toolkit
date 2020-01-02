@@ -2,6 +2,9 @@
 
 How to recover (or make from scratch) an stlink v2 board, and a bunch of other tools
 
+I've collected bits an pieces from here and there to put together these instructions. Photos come from various sources.
+
+
 Clone and load the submodules in this repo:
 
      git clone --recursive git@github.com:mike-pittelko/stlink-v2-toolkit.git
