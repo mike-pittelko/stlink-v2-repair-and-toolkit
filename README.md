@@ -21,10 +21,9 @@ You need open-ocd and stlink installed:
 
 Mirrors are in this repo as submodules if needed.
 
-Figure out what config file you need.
+Figure out what config file you need...
 
 To setup the config, you MAY need to do this:
-
 
 if the cpuid "0x2ba01477" is not found (expects 0x1ba01477) when unlocking then you need to
      make a copy of targets/stm32f1x.cfg,
@@ -44,16 +43,15 @@ else
 
 
 Step 1:
-Connect an stlinkv2 to the programming pins on the stlinkv2 you want to recover/program. These are ususally located
-on the side of the programmer (not the ones on the end!) - if it's in a case, you'll need to take it off.
-You will have some wires on the one to be fixed connected to a regular programmer. Only the programmer
-should to be plugged into the computer.
+Connect an stlinkv2 to the programming pins on the stlinkv2 you want to recover/program (the one being **fixed**). These are ususally located on the side of the programmer (not the ones on the end!) - if it's in a case, you'll need to take it off. You will have some wires on the one to be fixed connected to a regular programmer. Only the first programmer should to be plugged into the usb port, the one being fixed should only be connected via the programming pins. To reiterate, you can't do this procedure by connecting a ribbon cable between the two end connectors.
 
 Step 2:
 The flash is very likely locked. To unlock the flash on a device:
-     openocd -f interface/stlink-v2.cfg -f CONFIG.CFG -c "init" -c "halt" -c "stm32f1x unlock 0" -c "shutdown"
 
-
+	openocd -f interface/stlink-v2.cfg -f CONFIG.CFG -c "init" -c "halt" -c "stm32f1x unlock 0" -c "shutdown"
+ 
+ Expect output that looks like this:
+ 
      Open On-Chip Debugger 0.10.0
      Licensed under GNU GPL v2
      For bug reports, read
@@ -82,13 +80,14 @@ The flash is very likely locked. To unlock the flash on a device:
      shutdown command invoked
 
 Step 3:
-Power cycle the device to be fixed.  Unplug the programmer from the computer
-and plug it back in.
+Power cycle the device to be fixed.  Unplug the programmer from the computer and plug it back in.
 
 Step 4:
 Erase the flash on the device
-     st-flash erase
+    
+	st-flash erase
 
+Expect output that looks like this:
 
      st-flash 1.5.1
      2020-01-01T11:07:23 INFO common.c: Loading device parameters....
@@ -97,13 +96,14 @@ Erase the flash on the device
      Mass erasing
 
 Step 5:
-Power cycle the device to be fixed.  Unplug the programmer from the computer
-and plug it back in.
+Power cycle the device to be fixed.  Unplug the programmer from the computer and plug it back in.
 
 Step 6:
 To flash the stlinkv2 image
-     openocd -f interface/stlink-v2.cfg -f CONFIG.CFG-c "init" -c "halt" -c "flash write_image erase STLinkV2.J16.S4.bin 0x8000000" -c "shutdown"
 
+	openocd -f interface/stlink-v2.cfg -f CONFIG.CFG-c "init" -c "halt" -c "flash write_image erase STLinkV2.J16.S4.bin 0x8000000" -c "shutdown"
+
+Expect output that looks like this:
 
      Open On-Chip Debugger 0.10.0
      Licensed under GNU GPL v2
@@ -132,26 +132,25 @@ To flash the stlinkv2 image
      shutdown command invoked
 
 Step 7:
-Power cycle the device to be fixed.  Unplug the programmer from the computer
-and plug it back in.
-The light on the programmer being fixed should be flashing.
+Power cycle the device to be fixed.  Unplug the programmer from the computer and plug it back in.
+The light on the programmer being **fixed** should be flashing.
 
 Step 8:
-Plug the programmer being fixed into the usb port. Unplug the programmer being
-used to fix it.
+Plug the programmer being **fixed** into the usb port. Unplug the programmer being **used to fix it**. Note that this is first time we have the plugged the stlinkv2 being fixed into the usb port.
 
 Step 9:
-Download the STLinkUpgrade tool from STM (search for stsw-link007), then use it to update the programmer being fixed to current firmware.
+Download the STLinkUpgrade tool from STM (search for stsw-link007), then use it to update the programmer being **fixed** to current firmware.
 
 Step 10:
-Remove the wires, you're done.
+Remove the wires from the fixed stlinkv2, you're done.
 
 
 Misc references:
-http://e.pavlin.si/2016/02/28/how-to-program-blank-stm32f1-with-stlink-v2-firmware/
-http://slemi.info/2018/08/14/making-your-own-st-link-v2/
-https://embdev.net/articles/STM_Discovery_and_Nucleo_as_Black_Magic_Probe#Version_2
-https://github.com/Krakenw/Stlink-Bootloaders
-https://www.st.com/en/development-tools/stsw-link007.html
-https://wiki.paparazziuav.org/wiki/STLink
-https://atom.io/packages/stlink
+
+* http://e.pavlin.si/2016/02/28/how-to-program-blank-stm32f1-with-stlink-v2-firmware/
+* http://slemi.info/2018/08/14/making-your-own-st-link-v2/
+* https://embdev.net/articles/STM_Discovery_and_Nucleo_as_Black_Magic_Probe#Version_2
+* https://github.com/Krakenw/Stlink-Bootloaders
+* https://www.st.com/en/development-tools/stsw-link007.html
+* https://wiki.paparazziuav.org/wiki/STLink
+* https://atom.io/packages/stlink
