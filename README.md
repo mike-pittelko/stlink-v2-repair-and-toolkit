@@ -43,7 +43,7 @@ else
 
 
 Step 1:
-Connect an stlinkv2 to the programming pins on the stlinkv2 you want to recover/program. These are ususally located on the side of the programmer (not the ones on the end!) - if it's in a case, you'll need to take it off. You will have some wires on the one to be fixed connected to a regular programmer. Only the programmer should to be plugged into the computer.
+Connect an stlinkv2 to the programming pins on the stlinkv2 you want to recover/program (the one being **fixed**). These are ususally located on the side of the programmer (not the ones on the end!) - if it's in a case, you'll need to take it off. You will have some wires on the one to be fixed connected to a regular programmer. Only the first programmer should to be plugged into the usb port, the one being fixed should only be connected via the programming pins. To reiterate, you can't do this procedure by connecting a ribbon cable between the two end connectors.
 
 Step 2:
 The flash is very likely locked. To unlock the flash on a device:
@@ -133,13 +133,13 @@ Expect output that looks like this:
 
 Step 7:
 Power cycle the device to be fixed.  Unplug the programmer from the computer and plug it back in.
-The light on the programmer being fixed should be flashing.
+The light on the programmer being **fixed** should be flashing.
 
 Step 8:
-Plug the programmer being fixed into the usb port. Unplug the programmer being used to fix it.
+Plug the programmer being **fixed** into the usb port. Unplug the programmer being **used to fix it**. Note that this is first time we have the plugged the stlinkv2 being fixed into the usb port.
 
 Step 9:
-Download the STLinkUpgrade tool from STM (search for stsw-link007), then use it to update the programmer being fixed to current firmware.
+Download the STLinkUpgrade tool from STM (search for stsw-link007), then use it to update the programmer being **fixed** to current firmware.
 
 Step 10:
 Remove the wires from the fixed stlinkv2, you're done.
