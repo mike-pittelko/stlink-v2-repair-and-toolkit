@@ -14,7 +14,7 @@ and pull in the submodules you need:
 
      git submodule update [blackmagic,openocd,stlink,Stlink_V2.1_PCB,Stlink-Bootloaders,atom-stlink]
 
-#To program/recover an cheap chinese clone of the stlinkv2:
+# To program/recover an cheap chinese clone of the stlinkv2:
 
 You need open-ocd and stlink installed:
 
@@ -155,7 +155,7 @@ Remove the wires from the fixed stlinkv2, you're done.
 ![Chinese Clone Schematic](/images/stlink-V2-schematic.jpg "Schematic of a clone STLinkV2")
 ![Chinese Clone Schematic](/images/stlink-v2-image.jpeg "Schematic of a clone STLinkV2")
 
-Also see the /Stlink_V2.1_PCB submodule for additional documentation.
+**Also see the /Stlink_V2.1_PCB submodule for other documentation.**
 
 # Misc references:
 
