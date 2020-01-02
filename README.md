@@ -45,6 +45,8 @@ else
 Step 1:
 Connect an stlinkv2 to the programming pins on the stlinkv2 you want to recover/program (the one being **fixed**). These are ususally located on the side of the programmer (not the ones on the end!) - if it's in a case, you'll need to take it off. You will have some wires on the one to be fixed connected to a regular programmer. Only the first programmer should to be plugged into the usb port, the one being fixed should only be connected via the programming pins. To reiterate, you can't do this procedure by connecting a ribbon cable between the two end connectors.
 
+![Image of board](images/1600px-Stlink-clone-v2013-pinout.jpeg)
+
 Step 2:
 The flash is very likely locked. To unlock the flash on a device:
 
