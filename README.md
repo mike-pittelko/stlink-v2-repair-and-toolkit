@@ -13,6 +13,7 @@ and pull in the submodules you need:
 
      git submodule update [blackmagic,openocd,stlink,Stlink_V2.1_PCB,Stlink-Bootloaders,atom-stlink]
 
+#To program/recover an cheap chinese clone of the stlinkv2:
 
 You need open-ocd and stlink installed:
 
@@ -45,6 +46,7 @@ else
 Step 1:
 Connect an stlinkv2 to the programming pins on the stlinkv2 you want to recover/program (the one being **fixed**). These are ususally located on the side of the programmer (not the ones on the end!) - if it's in a case, you'll need to take it off. You will have some wires on the one to be fixed connected to a regular programmer. Only the first programmer should to be plugged into the usb port, the one being fixed should only be connected via the programming pins. To reiterate, you can't do this procedure by connecting a ribbon cable between the two end connectors.
 
+With the case off (it just slides off the usb end, but could take some force), the board will probably look roughly like this. Look for the programming pins. They **may not be identical to this picture**, but they will almost certainly be labeled.  The labels on the board should be assumed to be correct.
 ![Image of board](images/1600px-Stlink-clone-v2013-pinout.jpeg)
 
 Step 2:
@@ -147,7 +149,14 @@ Step 10:
 Remove the wires from the fixed stlinkv2, you're done.
 
 
-Misc references:
+# References for building your own stlinkv2
+
+![Chinese Clone Schematic](/images/stlink-V2-schematic.jpg "Schematic of a clone STLinkV2")
+![Chinese Clone Schematic](/images/stlink-v2-image.jpeg "Schematic of a clone STLinkV2")
+
+Also see the /Stlink_V2.1_PCB submodule for additional documentation.
+
+# Misc references:
 
 * http://e.pavlin.si/2016/02/28/how-to-program-blank-stm32f1-with-stlink-v2-firmware/
 * http://slemi.info/2018/08/14/making-your-own-st-link-v2/
