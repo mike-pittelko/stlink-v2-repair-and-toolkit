@@ -2,9 +2,6 @@
 
 How to recover (or make from scratch) an stlink v2 board, and a bunch of other tools
 
-I've collected bits an pieces from here and there to put together these instructions. Photos come from various sources.
-
-
 Clone and load the submodules in this repo:
 
      git clone --recursive git@github.com:mike-pittelko/stlink-v2-toolkit.git
@@ -31,7 +28,7 @@ Figure out what config file you need...usually target/stm32f1x.cfg but you may n
 if the **cpuid "0x2ba01477" is not found (expects 0x1ba01477)** when unlocking then you need to make a copy of targets/stm32f1x.cfg and make an adjustment,
 
      cp /usr/local/Cellar/open-ocd/0.10.0/share/openocd/scripts/target/stm32f1x.cfg myconfig.cfg
-     
+
 at the top of the file, change to:
 
      if { [info exists CHIPNAME] } {
@@ -53,16 +50,13 @@ Connect an stlinkv2 to the programming pins on the stlinkv2 you want to recover/
 With the case off (it just slides off the usb end, but could take some force), the board will probably look roughly like this. Look for the programming pins. They **may not be identical to this picture**, but they will almost certainly be labeled.  The labels on the board should be assumed to be correct.
 ![Image of board](images/1600px-Stlink-clone-v2013-pinout.jpeg)
 
-It will look something like this if hooked up correctly:
-![Image of board](images/P1160475_sm-1024x768.jpg "Hooked up")
-
 Step 2:
 The flash is very likely locked. To unlock the flash on a device:
 
 	openocd -f interface/stlink-v2.cfg -f CONFIG.CFG -c "init" -c "halt" -c "stm32f1x unlock 0" -c "shutdown"
- 
+
  Expect output that looks like this:
- 
+
      Open On-Chip Debugger 0.10.0
      Licensed under GNU GPL v2
      For bug reports, read
@@ -95,7 +89,7 @@ Power cycle the device to be fixed.  Unplug the programmer from the computer and
 
 Step 4:
 Erase the flash on the device
-    
+
 	st-flash erase
 
 Expect output that looks like this:
@@ -177,3 +171,4 @@ Building one of these for standalone use is not worth the effort. Get one from t
 # References for conversion of a stlink to blackmagic probe.
 * https://github.com/blacksphere/blackmagic/wiki
 * http://blog.linuxbits.io/2016/02/15/cheap-chinese-st-link-v-2-programmer-converted-to-black-magic-probe-debugger/
+* https://satoshinm.github.io/blog/171223_jtagswdpillblink_jtagswd_debugging_via_black_magic_probe_on_an_stm32_blue_pill_and_blinking_a_led_using_stm32cubemx_libopencm3_and_bare_metal_c.html
