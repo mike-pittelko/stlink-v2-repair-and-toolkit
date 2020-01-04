@@ -19,3 +19,9 @@
 [submodule "atom-stlink"]
 	path = atom-stlink
 	url = git@github.com:wendlers/atom-stlink.git
+[submodule "STM32_Pill_Boards"]
+	path = STM32_Pill_Boards
+	url = https://github.com/rogerclarkmelbourne/STM32_Pill_Boards
+[submodule "maple"]
+	path = maple
+	url = git@github.com:leaflabs/maple.git
