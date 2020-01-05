@@ -167,8 +167,21 @@ Building one of these for standalone use is not worth the effort. Get one from t
 * https://www.st.com/en/development-tools/stsw-link007.html
 * https://wiki.paparazziuav.org/wiki/STLink
 * https://atom.io/packages/stlink
+* http://blog.linuxbits.io/2016/02/15/cheap-chinese-st-link-v-2-programmer-converted-to-black-magic-probe-debugger/
+
+# Using BluePill for BlackMagic
+* https://satoshinm.github.io/blog/171223_jtagswdpillblink_jtagswd_debugging_via_black_magic_probe_on_an_stm32_blue_pill_and_blinking_a_led_using_stm32cubemx_libopencm3_and_bare_metal_c.html
 
 # References for conversion of a stlink to blackmagic probe.
 * https://github.com/blacksphere/blackmagic/wiki
-* http://blog.linuxbits.io/2016/02/15/cheap-chinese-st-link-v-2-programmer-converted-to-black-magic-probe-debugger/
-* https://satoshinm.github.io/blog/171223_jtagswdpillblink_jtagswd_debugging_via_black_magic_probe_on_an_stm32_blue_pill_and_blinking_a_led_using_stm32cubemx_libopencm3_and_bare_metal_c.html
+
+# Pinouts for various Blue/Black/Maple boards
+
+Maple Mini
+![MapleMini](/images/maplemini_pinout.png "Maple Mini")
+Blue Pill
+![STM32F103Cx](/images/stm32f103c8t6_pinout.png "STM32F103Cx")
+Blue Pill
+![BluePill](/images/The-Generic-STM32F103-Pinout-Diagram.jpg "Blue Pill")
+Black Pill
+![BlackPill](/images/STM32-black-pill-pinout-1.jpg "Black Pill")
