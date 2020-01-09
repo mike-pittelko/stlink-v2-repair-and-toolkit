@@ -106,7 +106,7 @@ Power cycle the device to be fixed.  Unplug the programmer from the computer and
 Step 6:
 To flash the stlinkv2 image
 
-	openocd -f interface/stlink-v2.cfg -f CONFIG.CFG-c "init" -c "halt" -c "flash write_image erase STLinkV2.J16.S4.bin 0x8000000" -c "shutdown"
+	openocd -f interface/stlink-v2.cfg -f CONFIG.CFG -c "init" -c "halt" -c "flash write_image erase STLinkV2.J16.S4.bin 0x8000000" -c "shutdown"
 
 Expect output that looks like this:
 
